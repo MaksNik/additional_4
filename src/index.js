@@ -1,12 +1,12 @@
 module.exports = function multiply(first, second) {
     let resultArray = new Array(first.length + second.length);
     let firstArray = first.split("");
-    let temp = second.split("").reverse();
+    let secondArray = second.split("").reverse();
 
     resultArray.fill(0);
 
-    for (let i = 0; temp.length != 0; i++) {
-        let k = temp.pop();
+    for (let i = 0; secondArray.length != 0; i++) {
+        let k = secondArray.pop();
         for (let j = 0; j < firstArray.length; j++) {
             resultArray[i + j] += firstArray[j] * k;
         }
